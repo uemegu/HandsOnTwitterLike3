@@ -5,13 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCMVESBAdVtcPUdTRi3IU_qLCfNmgbVddE",
-    authDomain: "twitterlike-58c50.firebaseapp.com",
-    databaseURL: "https://twitterlike-58c50.firebaseio.com",
-    projectId: "twitterlike-58c50",
-    storageBucket: "twitterlike-58c50.appspot.com",
-    messagingSenderId: "545984155470",
-    appId: "1:545984155470:web:5c93abe363f8a807"
+    apiKey: '<your-key>',
+    authDomain: '<your-project-authdomain>',
+    databaseURL: '<your-database-URL>',
+    projectId: '<your-project-id>',
+    storageBucket: '<your-storage-bucket>',
+    messagingSenderId: '<your-messaging-sender-id>'
   }
 };
 
