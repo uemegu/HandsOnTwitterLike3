@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{item.user}}</span>
+    <p class="message">{{item.message}}</p>
+  </div>
+  <div class="card-action" style="display: flex;">
+    <a style="cursor: pointer; margin-right: 3rem; color: #657786;">
+      <i class="material-icons">chat_bubble_outline</i>
+      <span tyle="margin-left: .25rem;">0</span>件 
+    </a>
+    <a style="cursor: pointer; margin-right: 3rem; color: #657786;">
+      <i class="material-icons">repeat</i>
+      <span style="margin-left: .25rem;">0</span>件 
+    </a>
+    <a class="likeBtn" style="cursor: pointer; margin-right: 3rem; color: #657786;">
+      <i class="material-icons">favorite</i>
+      <span class="likeCount" style="margin-left: .25rem;">{{item.like}}</span>件 
+    </a>
+    <a style="cursor: pointer; margin-right: 3rem; color: #657786;">
+      <i class="material-icons">mail</i>
+    </a>
+  </div>
+</div>

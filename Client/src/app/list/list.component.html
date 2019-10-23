@@ -1,0 +1,9 @@
+<div *ngIf="(items$ | async) as items; else loading">
+  <div class="item_container" *ngFor="let item of items">
+    <app-card [item]="item"></app-card>
+  </div>
+</div>
+
+<ng-template #loading>
+  Loading ...
+</ng-template>

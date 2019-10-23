@@ -1,0 +1,21 @@
+<div class="login_container">
+  <div class="id_login_container">
+    <mat-form-field>
+      <input matInput placeholder="Email" [formControl]="emailFormControl"
+             [errorStateMatcher]="matcher">
+      <mat-error *ngIf="emailFormControl.hasError('email')">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password">
+    </mat-form-field>
+    <button mat-raised-button class="login_button" color="primary">ログイン</button>
+  </div>
+  <div>
+    または
+  </div>
+  <div class="alternative_login_container">
+    <button mat-raised-button class="twitter_button" color="warn" (click)="googeLogin()">Googleでログインする</button>
+  </div>
+</div>

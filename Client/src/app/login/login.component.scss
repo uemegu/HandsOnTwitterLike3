@@ -1,0 +1,22 @@
+.login_container {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    .mat-form-field {
+        display: block;
+    }
+    .id_login_container {
+        display: block;
+        width: 14rem;
+        margin-bottom: 2rem;
+    }
+    .alternative_login_container {
+        margin-top: 2rem;
+        width: 14rem;
+    }
+    .mat-raised-button {
+        width: 100%;
+    }
+}
