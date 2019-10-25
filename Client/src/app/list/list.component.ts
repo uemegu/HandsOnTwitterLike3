@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore'; // 追加
 import { Observable } from 'rxjs'; // 追加
-import { ModelModule } from '../model/model.module'; // 追加
-
+import { Tweet } from './tweet'; // 追加
 
 @Component({
   selector: 'app-list',
@@ -11,19 +10,35 @@ import { ModelModule } from '../model/model.module'; // 追加
 })
 export class ListComponent implements OnInit {
   
-  items$: Observable<ModelModule[]>; // 追加
+  items$: Observable<Tweet[]>; // 追加
+  user: string = ''; // 追加
+  message: string = ''; // 追加
 
-  constructor(db: AngularFirestore) {
+  constructor(private db: AngularFirestore) { // 追加
     this.items$ = db
-      .collection<ModelModule>('tweet')
-      .valueChanges();
-      this.items$.subscribe((items) => {
-        console.log(items);
-        console.log(this.items$);
-      });
+      .collection<Tweet>('tweet')
+      .valueChanges({ idField: "id" });
    }
 
   ngOnInit() {
+  }
+
+  // 追加
+  async tweet() {
+    if(this.user && this.message) {
+      await this.db
+      .collection<Tweet>('tweet')
+      .add({
+        user: this.user,
+        message: this.message
+      });
+      this.user = '';
+      this.message = '';
+    }
+  }
+
+  // 追加
+  async logout() {
   }
 
 }

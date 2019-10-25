@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /** 追加 **/
-import { environment } from '../environments/environment'; // 追加
-import { AngularFireModule } from '@angular/fire'; // 追加
-import { AngularFirestoreModule } from '@angular/fire/firestore'; // 追加
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './login/login.component';
-import { ListComponent } from './list/list.component'; // 追加
-import { ReactiveFormsModule } from '@angular/forms';
+import { ListComponent } from './list/list.component';
+import { CardComponent } from './list/card/card.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {
   MatButtonModule,
   MatCheckboxModule,
@@ -21,7 +22,6 @@ import {
   MatTableModule,
   MatRippleModule
 } from '@angular/material';
-import { CardComponent } from './list/card/card.component';
 /** ここまで **/
 
 @NgModule({
@@ -36,10 +36,11 @@ import { CardComponent } from './list/card/card.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     /** 追加 **/
+    ReactiveFormsModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    ReactiveFormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatInputModule,

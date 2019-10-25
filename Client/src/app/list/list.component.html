@@ -1,9 +1,21 @@
-<div *ngIf="(items$ | async) as items; else loading">
+<div class="header">
+    <mat-form-field>
+      <input matInput placeholder="Input Name" [(ngModel)]="user">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Input Tweet" [(ngModel)]="message">
+    </mat-form-field>
+    <button mat-raised-button class="tweet_button" color="primary" (click)="tweet()">Tweet</button>
+    <button mat-raised-button class="logout_button" (click)="logout()">Logout</button>
+</div>
+<div class="body" *ngIf="(items$ | async) as items; else loading">
   <div class="item_container" *ngFor="let item of items">
     <app-card [item]="item"></app-card>
   </div>
 </div>
 
 <ng-template #loading>
-  Loading ...
+  <div class="screen_center">
+      Loading ...
+  </div>
 </ng-template>
