@@ -159,12 +159,12 @@ Googleログインのみ対応されてるのでログインしてみて下さ�
 
 ## 参考
 
-Angularの環境構築（Angular CLIで構築）
+Angularの環境構築（Angular CLIで構築）<br>
 https://qiita.com/Yamamoto0525/items/65d5a0b36eb4dbd8079b
 
-AngularのプロジェクトにFirebaseを導入する
+AngularのプロジェクトにFirebaseを導入する<br>
 https://qiita.com/Yamamoto0525/items/437a2884c0c51f5a3af8#angularfire2%E3%81%A8firebase%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
 
-Angular&Firebaseでユーザー認証してみる
+Angular&Firebaseでユーザー認証してみる<br>
 https://qiita.com/daikiojm/items/65b4f27a1dc82f449666
 
