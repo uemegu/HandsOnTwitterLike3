@@ -28,7 +28,7 @@ Angularのプロジェクトを作ります。
 下記例であれば`Client`というディレクトリが作られます。
 
 ````
-$ ng new Clent --style=scss
+$ ng new Client --style=scss
 ? Would you like to add Angular routing? (y/N) y
 ````
 
