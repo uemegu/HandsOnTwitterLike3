@@ -73,7 +73,7 @@ Firebaseの環境設定をします。
 Firebase SDK snippetが表示されるまでしばらく時間がかかります。
 
 ````
-src/environments/environment.ts
+src/environments/environment.ts の environment の定義に以下を追記
 
   firebase: {
     apiKey: '<your-key>',
